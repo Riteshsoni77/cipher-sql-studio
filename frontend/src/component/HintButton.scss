@@ -1,0 +1,64 @@
+.hint-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+  margin-top: 20px;
+}
+
+.hint-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hint-button:hover {
+  background-color: #0056b3;
+}
+
+.hint-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+}
+
+.hint-popup-content {
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  color: #ff0000;
+}
+
+.hint-popup ul {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.hint-popup li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}

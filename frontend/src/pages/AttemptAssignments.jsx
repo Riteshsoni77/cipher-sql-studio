@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import SqlEditor from "../component/SqlEditor.jsx";
 import Output from "../component/Output.jsx"; 
+import HintButton from "../component/HintButton";
 import "./AttemptAssignments.scss";
 
 const AttemptAssignments = () => {
@@ -61,13 +62,17 @@ const AttemptAssignments = () => {
     return <div>Error: {error}</div>;
   }
 
+  const assignmentQuestion = assignment?.question || "No question provided";
+
   return (
     <div className="attempt">
+      
       <h1 className="attempt__title">{assignment.title}</h1>
       <div className="attempt__layout">
 
         {/* LEFT PANEL */}
         <div className="attempt__left">
+           <HintButton assignmentId={assignmentId} question={assignmentQuestion} />
           <p className="attempt__description">{assignment.description}</p>
 
           <h2 className="attempt__section-title">Question</h2>
@@ -124,6 +129,7 @@ const AttemptAssignments = () => {
         </div>
 
       </div>
+      
     </div>
   );
 };

@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from "mongoose";
 import assignmentRoutes from './src/routes/assignmentRoutes.js';
 import sqlRoutes from "./src/routes/sqlRoutes.js";
+import llmRoutes from "./src/routes/llmRoutes.js";
 
 import { connectToDatabase } from "./src/configdb/PostgreSQL.js";
 
@@ -17,9 +18,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/assignments', assignmentRoutes);
 app.use("/api", sqlRoutes);
-
-
-
+app.use("/api/llm", llmRoutes);
 
 
 

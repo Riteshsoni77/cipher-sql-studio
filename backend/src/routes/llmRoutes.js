@@ -7,15 +7,26 @@ router.post("/hint", async (req, res) => {
   try {
     const { question } = req.body;   
 const hintPrompt = `
-Provide exactly 3 high-level hints for the following SQL question.
-- Do NOT mention SQL keywords (like SELECT, WHERE, JOIN, etc.)
-- Do NOT mention exact column names.
-- Do NOT provide the final query.
-- Keep hints conceptual, concise, and easy to understand.
+You are an SQL tutor helping a student solve a database question.
+
+Your task:
+Give EXACTLY 3 helpful hints that guide the student toward the solution.
+
+Rules:
+- Do NOT write the final query.
+- Do NOT mention SQL keywords (example: SELECT, WHERE, JOIN, GROUP BY, etc.).
+- Do NOT mention exact table or column names.
+- Focus on thinking steps, not syntax.
+- Hints must be short (1 sentence each).
+- Each hint should progressively guide the student closer to the solution.
 
 Question:
 ${question}
 
+Output format:
+ Hint one
+ Hint two
+ Hint three
 `;
     const hints = await askLLM(hintPrompt);
 

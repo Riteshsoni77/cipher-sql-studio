@@ -43,7 +43,7 @@ const Assignments = () => {
   
   return (
     <div className="assignments-container">
-        <h1 style={{ textAlign: "center" }}>The SQL Assignment</h1>
+        <h1 style={{ textAlign: "center" }}>The SQL Assignments</h1>
       
       <div className="assignments-list">
         {assignments.length > 0 ? (

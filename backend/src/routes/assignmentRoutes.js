@@ -36,8 +36,7 @@ router.post('/create', async (req, res) => {
     ],
   },
 };
-
-    // Save the dummy data to the database
+  
     const newAssignment = new Assignment(dummyData);
     await newAssignment.save();
 
@@ -47,6 +46,8 @@ router.post('/create', async (req, res) => {
     res.status(500).json({ error: "Failed to create temporary assignment" });
   }
 });
+
+
 
 // Fetch all assignments
 router.get('/', async (req, res) => {
@@ -61,6 +62,8 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch assignments' });
   }
 });
+
+
 // Fetch a specific assignment by ID
 router.get('/:id', async (req, res) => {
   try {

@@ -9,7 +9,7 @@ const Assignments = () => {
   const [error, setError] = useState(null); 
   const navigate = useNavigate(); 
 
-  // Fetch assignments from the backend
+
   useEffect(() => {
     const fetchAssignments = async () => {
       try {

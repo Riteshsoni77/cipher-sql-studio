@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import Editor from "@monaco-editor/react";
 
-import "./SqlEditor.scss";
 
 const SqlEditor = ({ value, onChange, assignment = { id: "123", question: "What is SQL?" } }) => {
   const editorRef = useRef(null);
@@ -23,7 +22,7 @@ const SqlEditor = ({ value, onChange, assignment = { id: "123", question: "What 
         theme="vs-dark"
         onMount={handleEditorDidMount}
         options={{
-          automaticLayout: true, // auto resize
+          automaticLayout: true,
           minimap: { enabled: false },
           fontSize: 14,
         }}

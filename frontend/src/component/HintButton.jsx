@@ -12,11 +12,11 @@ const HintButton = ({ question }) => {
         question,
       });
       setHints(response.data.hints);
-      setIsPopupOpen(true); // Open the popup after fetching hints
+      setIsPopupOpen(true); 
     } catch (error) {
       console.error("Error fetching hints:", error);
       setHints(["Failed to fetch hints. Please try again."]);
-      setIsPopupOpen(true); // Open the popup even if there's an error
+      setIsPopupOpen(true);
     }
   };
 

@@ -1,0 +1,39 @@
+.output-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.output-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.output-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.output-table th,
+.output-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.output-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.output-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.output-error {
+  color: red;
+  font-weight: bold;
+}
